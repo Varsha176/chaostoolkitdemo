@@ -7,7 +7,7 @@
         "probes": []
     },
     "configuration": {
-        "aws_region": "us-east-2"
+        "aws_region": "us-east-1"
     },
     "method": [        
         {
@@ -18,7 +18,7 @@
                 "module": "chaosaws.ec2.actions",
                 "func": "stop_instance",
                 "arguments": {
-                    "instance_id": "i-009e9456ae22df560"
+                    "instance_id": "i-0267a12bbcdd90173"
                 }
             },
             "pauses": {
@@ -33,7 +33,7 @@
               "module": "chaosaws.ec2.actions",
               "func": "detach_random_volume",
               "arguments": {
-                "instance_ids": ["i-009e9456ae22df560"]
+                "instance_ids": ["i-0267a12bbcdd90173"]
              }
             },
             "pauses": {
@@ -48,7 +48,7 @@
               "module": "chaosaws.ec2.actions",
               "func": "start_instances",
               "arguments": {
-                "instance_ids": ["i-009e9456ae22df560"]
+                "instance_ids": ["i-0267a12bbcdd90173"]
             }
             },
             "pauses": {
@@ -63,7 +63,7 @@
               "module": "chaosaws.ec2.actions",
               "func": "attach_volume",
               "arguments": {
-                "instance_ids": ["i-009e9456ae22df560"]
+                "instance_ids": ["i-0267a12bbcdd90173"]
              }
             },
             "pauses": {
