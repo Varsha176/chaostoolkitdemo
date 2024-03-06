@@ -1,0 +1,31 @@
+{
+    "title": "Running Chaos Toolkit from an EC2 instance",
+    "description": "N/A",
+    "tags": [],
+    "steady-state-hypothesis": {
+        "title": "Current EC2 is RUNNING",
+        "probes": [
+            {
+                "type": "probe",
+                "name": "instance_state",
+                "provider": {
+                    "type": "python",
+                    "module": "chaosaws.ec2.probes",
+                    "func": "instance_state",
+                    "arguments": {
+                        "state": "running",
+                        "instance_ids": [
+                            "<INSTANCE_ID>"
+                        ],
+                        "filters": []
+                    }
+                },
+                "tolerance": true
+            }
+        ]
+    },
+    "method": [],
+    "configuration": {
+        "aws_region": "<REGION>"
+    }
+}
